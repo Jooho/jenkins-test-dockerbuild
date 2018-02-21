@@ -5,4 +5,4 @@ slack:latest
 ssh-agent:latest
 timestamper:latest
 ansicolor:latest
-token-macro:v1.12.1
+token-macro:1.12.1
