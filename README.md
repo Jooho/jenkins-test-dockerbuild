@@ -54,7 +54,7 @@ $ oc new-build  https://github.com/Jooho/jenkins-test-dockerbuild.git --strategy
 
 or
 
-$ oc clone  https://github.com/Jooho/jenkins-test-dockerbuild.git && cd jenkins-test-dockerbuild
+$ git clone  https://github.com/Jooho/jenkins-test-dockerbuild.git && cd jenkins-test-dockerbuild
 $ oc new-build .
 ```
 - Start Build
