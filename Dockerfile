@@ -4,7 +4,7 @@ RUN rm -rf /opt/openshift/configuration/jobs/OpenShift\ Sample
 
 USER root
 
-RUN subscription-manager repos --list-enabled; yum repolist enabled; ls /etc/yum.repos.d/; ls /var/cache/yum/x86_64/7Server/
+RUN subscription-manager repos --list-enabled; yum repolist enabled; cat /etc/yum.repos.d/redhat.repo; ls /var/cache/yum/x86_64/7Server/
 RUN  yum-config-manager --disable rhel-7-server-htb-rpms && \
      yum repolist enabled
 
