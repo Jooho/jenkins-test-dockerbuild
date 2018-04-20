@@ -3,7 +3,7 @@ FROM registry.access.redhat.com/openshift3/jenkins-2-rhel7
 RUN rm -rf /opt/openshift/configuration/jobs/OpenShift\ Sample
 
 USER root
-RUN yum install -y epel-release ** \
+RUN yum install -y epel-release && \
         yum install -y jq
 
 #RUN  yum-config-manager --disable rhel-7-server-htb-rpms && \
