@@ -2,6 +2,10 @@
 FROM ljhiyh/rhel7-jooho
 USER root
 RUN rm -rf /opt/openshift/configuration/jobs/OpenShift\ Sample
+
+
+RUN df
+RUN find /etc/yum.repos.d
 RUN yum repolist
 RUN df
 RUN find /etc/yum.repos.d
