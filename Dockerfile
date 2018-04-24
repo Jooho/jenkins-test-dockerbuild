@@ -1,9 +1,11 @@
-FROM registry.access.redhat.com/openshift3/jenkins-2-rhel7
+#FROM registry.access.redhat.com/openshift3/jenkins-2-rhel7
+FROM ljhiyh/rhel7-jooho
 
 RUN rm -rf /opt/openshift/configuration/jobs/OpenShift\ Sample
 
 USER root
 
+RUN yum repolist
 
 #RUN  yum-config-manager --disable rhel-7-server-htb-rpms
      #yum repolist enabled
@@ -12,6 +14,7 @@ USER root
 RUN yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-$(rpm -E '%{rhel}').noarch.rpm && \
     yum install -y jq
 
+RUN yum repolist
 
 USER 1001
 
