@@ -3,9 +3,9 @@ FROM ljhiyh/rhel7-jooho
 USER root
 RUN rm -rf /opt/openshift/configuration/jobs/OpenShift\ Sample
 
-
-RUN df
 RUN find /etc/yum.repos.d
+RUN df
+
 
 RUN "grep 'enabled = 1' /etc/yum.repos.d/redhat.repo"
 RUN yum repolist
