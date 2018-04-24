@@ -7,9 +7,9 @@ RUN find /etc/yum.repos.d
 RUN df
 
 
-RUN "grep 'enabled = 1' /etc/yum.repos.d/redhat.repo"
+RUN "grep -r 'enabled = 1' /etc/yum.repos.d/"
 RUN yum repolist
-RUN "grep 'enabled = 1' /etc/yum.repos.d/redhat.repo"
+RUN "grep -r 'enabled = 1' /etc/yum.repos.d/"
 RUN df
 RUN find /etc/yum.repos.d
 RUN exit 1
