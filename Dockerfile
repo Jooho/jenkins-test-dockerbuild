@@ -4,7 +4,7 @@ USER root
 RUN rm -rf /opt/openshift/configuration/jobs/OpenShift\ Sample
 RUN yum repolist
 RUN df
-RUN tree /etc/yum.repos.d
+RUN find /etc/yum.repos.d
 RUN exit 1
 
 
