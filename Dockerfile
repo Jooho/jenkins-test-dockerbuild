@@ -5,7 +5,7 @@ RUN rm -rf /opt/openshift/configuration/jobs/OpenShift\ Sample
 
 USER root
 
-RUN subscription-manager repos --list-enabled
+
 RUN yum repolist
 
 #RUN  yum-config-manager --disable rhel-7-server-htb-rpms
@@ -16,7 +16,7 @@ RUN yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-$(r
     yum install -y jq
 
 RUN yum repolist
-RUN subscription-manager repos --list-enabled
+
 USER 1001
 
 # Plugin overrides
